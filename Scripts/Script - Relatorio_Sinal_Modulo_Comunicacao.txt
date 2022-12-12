@@ -1,0 +1,7 @@
+--Insert da massa de teste para o relatório Sinal do Módulo de Comunicação
+
+--- Insert
+insert into DadosTestes (ID, NameTeste, Dados) values (2, 'RelatorioSinalModuloComunicacao', '00000075; 07/2022;');
+
+--- Commit
+commit;
