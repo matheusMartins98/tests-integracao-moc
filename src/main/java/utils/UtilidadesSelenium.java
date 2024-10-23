@@ -2,6 +2,8 @@ package utils;
 
 import static core.DriverFactory.getDriver;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -26,7 +28,7 @@ public class UtilidadesSelenium {
 	
 	public void aguardarElemento(By locator) {
 		
-		WebDriverWait espera = new WebDriverWait(getDriver(), 30);
+		WebDriverWait espera = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
 		espera.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
 		
 	}

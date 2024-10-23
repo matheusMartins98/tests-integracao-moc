@@ -5,17 +5,16 @@ import static core.DriverFactory.killDriver;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.SnippetType;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import io.cucumber.junit.CucumberOptions.SnippetType;
 
-@SuppressWarnings("deprecation")
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "test.features",
-        tags = {"@TemperaturaDoModuloDeComunicacao"},
+        tags = "@Cadastros",
         glue = "steps",
-        plugin = {"html:target/cucumber-report, pretty"},
+        plugin = {"html:target/cucumber-report/report.html"},
         snippets = SnippetType.CAMELCASE,
          monochrome = true
         )   
